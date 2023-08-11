@@ -43,3 +43,26 @@ for(let i=0;i<queryItems.length;i++){
     queryItems[i].style.backgroundColor='green'
     i++;
 }
+
+// task1: add HEllo word before Item Lister
+let newVar=document.createElement('h3');
+console.log(newVar)
+let newText=document.createTextNode('Hello world')
+newVar.appendChild(newText)
+
+let container=document.querySelector('header .container')
+let h1=document.querySelector('header h1')
+container.insertBefore(newVar,h1);
+
+//task2: add HEllo word before Item 1
+let newVar1=document.createElement('h3');
+console.log(newVar)
+let newText1=document.createTextNode('Hello world')
+newVar1.appendChild(newText1)
+
+let newDiv=document.querySelectorAll('body .container')
+// getting the correct parent node
+let last=newDiv[1].firstElementChild
+//getting the childnode
+let ul=last.lastElementChild
+last.insertBefore(newVar1,ul)
